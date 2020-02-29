@@ -59,6 +59,7 @@ class Output(cowrie.core.output.Output):
         session = entry["session"]
         if entry["eventid"] == 'cowrie.session.connect':
             self.meta[session] = {
+                'sensor': entry['sensor'],
                 'session': session,
                 'startTime': entry["timestamp"],
                 'endTime': '',
